@@ -1,0 +1,112 @@
+.collpased .elem-wrap > table > tbody > tr:not(:first-child){
+  display: none;
+}
+
+.collpased .elem-wrap .toolbox {
+  display: none !important;
+}
+
+.collpased .elem-wrap > p {
+  max-width: 1024px; /* Set the width of your container */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Display an ellipsis (...) for overflow text */
+  border: 1px solid #ccc; /* Optional: Add a border for visualization */
+}
+#topnav {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 40px;
+  background-color: #333;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+}
+.nav-wrapper {
+  width: 400px;
+  display: flex;
+  align-items: right;
+}
+#app {
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 40px;
+  transform-origin: top left;
+  transform: scale(1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #333;
+    padding: 4px;
+}
+
+table > tbody tr:first-child {
+  background-color: #d2d2d2;
+}
+
+img {
+  max-width: 300px;
+}
+
+hr {
+  border-top: 2px dashed black;
+  margin: 20px 0;
+  width: 100px;
+  border: none;
+  height: 1px;
+  background: #000;
+  background: repeating-linear-gradient(90deg,#000,#000 18px,transparent 18px,transparent 36px);
+}
+
+.orig, .added, .deleted {
+  position: relative;
+}
+
+.added::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(125, 238, 148, 0.2);
+}
+
+.deleted::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(238, 146, 125, 0.2);
+}
+
+.elem-wrap:hover .toolbox {
+  display: flex;
+}
+
+.toolbox {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #d2d2d2;
+}
+
+.icon {
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px;
+  margin-top: 30px;
+}
